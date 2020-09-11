@@ -1,0 +1,37 @@
+
+<div class="container-fluid">
+  <nav class="navbar navbar-default border border-dark mt-3 mb-4">
+    <a class="navbar-brand" href="/">
+      <img src="../assets/logo1.png" class="logo" alt="Karolina nail artist">
+    </a>
+    <div class="float-left d-flex justify-content-center">
+      <button class="btn float-left m-3" id="mygt" type="button" name="button" onclick="openPage('/pavyzdziai');">Keletas pavyzdžių...</button>
+      <button class="btn float-left m-3" id="mygt" type="button" name="button" onclick="openPage('/');">Grįžti į pagrindinį puslapį...</button>
+    </div>
+  </nav>
+</div>
+
+<div class="container border border-dark" id="container" >
+    <div class="row">
+        <div class="col-12 p-3" id="content">
+          <h3 class="p-3" id="glow">Jūsų registracija sėkminga!</h3>
+          <table class="table table-borderless p-3 m-3">
+            <tbody>
+              <tr>
+                <td><strong>Visa kaina:  &nbsp; &nbsp;</strong>{{data.dataValues.kaina}}€</td>
+                <td><strong>Laikas: </strong></td>
+                <td>
+                <time>{{nuo}} - {{iki}}</time></td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 style="text-align: center;">Svarbi informacija: </h4>
+          <ul>
+            <li>Rezervaciją galima atšaukti likus ne mažiau kaip 6 valandoms iki vizito (rašyti į Facebook puslapį 'Karolina nail artist').</li>
+            <li>Apmokėjimas galimas grynais pinigais arba bankiniu pavedimu į Revolut kortelę.</li>
+            <li>Meistrės telefono numeris: +37060904324.</li>
+            <li>Lauksime jūsų adresu: J. Balčikonio g. 9, Vilnius.</li>
+          </ul>
+        </div>
+    </div>
+</div>

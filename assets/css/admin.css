@@ -1,0 +1,94 @@
+.container {
+  background-color: white;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #fff;
+}
+
+.tab button.active {
+  background-color: white;
+}
+
+.tabcontent {
+  background-color: white;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  border-top: none;
+}
+
+body {
+    background: linear-gradient(221deg, #ff0076, #aa8dcf, #98cde7, #52e8f3);
+    background-size: 100% 800%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+    overflow: auto;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.logo {
+  height: 120px;
+}
+
+.row {
+  background-color: #fff;
+}
+
+#mygt {
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  color: #5A4181;
+  font-weight: bolder;
+  font-size: 18px;
+  width: 200px;
+}
+
+#mygt:hover {
+  color: #0d47a1;
+  background-color: #eeeeee;
+}
+
+#mygt:visited {
+  background-color: white;
+  color: #5A4181;
+}

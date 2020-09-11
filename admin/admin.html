@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Karolina nail artist</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/lt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/lt.min.js"></script>
+    <script src="../assets/js/functions.js"></script>
+    <script src="../assets/js/admincalendar.js"></script>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="icon" href="../assets/logo.png" type="image/gif" sizes="32x32">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-default border border-dark mt-3 mb-4">
+        <a class="navbar-brand" href="/">
+          <img src="../assets/logo1.png" class="logo" alt="Karolina nail artist">
+        </a>
+        <div class="float-left d-flex justify-content-center">
+          <button class="btn float-left m-3" id="mygt" type="button" name="button" onclick="openPage('/');">Grįžti į pagrindinį puslapį...</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container bg bg-light border border-dark mb-3">
+      <div class="row my-2">
+          <div class="col">
+              <ul class="nav nav-tabs p-2">
+                  <li class="nav-item">
+                      <a href="" data-target="#kalendorius" data-toggle="tab" class="nav-link active">Kalendorius</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="" data-target="#proceduros" data-toggle="tab" class="nav-link">Visos procedūros</a>
+                  </li>
+              </ul>
+              <div class="tab-content py-4">
+                  <div class="tab-pane active justify-content-center" id="kalendorius" style="display: inline;">
+                      <div class="row p-3">
+                          <div class="col-12" id="calendar1">
+                          </div>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <div class="">
+                          <form class="row justify-content-center" action="" method="post">
+                            <input type="text" name="pavadinimas" id="pavadinimas" style="display: none;"/>
+                            <input type="text" name="laikasnuo" id="laikasnuo" style="display: none;"/>
+                            <input type="text" name="laikasiki" id="laikasiki" style="display: none;"/>
+                            <button id="mygt" class="mr-5" style="padding:10px;"type="submit">Saugoti</button>
+                          </form>
+                        </div>
+                        <div class="">
+                          <form class="row justify-content-center" action="/istrinti" method="post">
+                            <input type="text" name="laikasnuo1" id="laikasnuo1" style="display: none;"/>
+                            <input type="text" name="laikasiki1" id="laikasiki1" style="display: none;"/>
+                            <button id="mygt" class="" style="padding:10px;"type="submit">Ištrinti</button>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+
+                    <div class="tab-pane" id="proceduros">
+                      <h4 style="text-align: center;">
+                        <strong>Manikiūras</strong></h4>
+                        <table class="table table-borderless mt-2">
+                          <thead>
+                            <tr>
+                              <th scope="col-1">Nr.</th>
+                              <th scope="col-3">Procedūra</th>
+                              <th scope="col-4">Aprašymas</th>
+                              <th scope="col-2">Kaina</th>
+                              <th scope="col-2">Trukmė</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Manikiūras + gelinis lakavimas</td>
+                            <td>Atliekamas kombinuotas/aparatinis manikiūras
+                  ir lakuojama viena arba keliomis spalvomis. Į paslaugą įeina seno gelio lako nuėmimas.</td>
+                            <td>25€</td>
+                            <td>1:30 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Express gelinis lakavimas</td>
+                            <td>Atliekamas gelinis lakavimas be manikiūro, odelės tik atstumdomos.
+                    Į paslaugą įeina seno gelio lako nuėmimas.</td>
+                            <td>20€</td>
+                            <td>1:10 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Priaugintų nagų korekcija + manikiūras</td>
+                            <td>Atliekama korekcija ir kombinuotas/aparatinis manikiūras.
+                    Į paslaugą įeina senos medžiagos nuėmimas.</td>
+                            <td>30€</td>
+                            <td>2:00 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Tik gelio lako nuėmimas</td>
+                            <td>Procedūros metu nuimamas senas gelinis lakavimas
+                    frezos pagalba, sutvarkoma nagų forma, pasirinktinai nulakuojama stiprikliu.</td>
+                            <td>5€</td>
+                            <td>0:30 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Tik priaugintų nagų nuėmimas</td>
+                            <td>Procedūros metu nuimamas senas gelinis lakavimas
+                    frezos pagalba, sutvarkoma nagų forma, pasirinktinai nulakuojama stiprikliu.</td>
+                            <td>10€</td>
+                            <td>1:00 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Manikiūras</td>
+                            <td>Atliekamas kombinuotas/aparatinis manikiūras, nagui suteikiama forma.</td>
+                            <td>13€</td>
+                            <td>0:50 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Seno gelio lako nuėmimas + manikiūras</td>
+                            <td>Pašalinams senas gelio lakas, atliekamas kombinuotas/aparatinis manikiūras, nagui suteikiama forma.</td>
+                            <td>18€</td>
+                            <td>1:00 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Priaugintų nagų nuėmimas + manikūras</td>
+                            <td>Nuimamas kietas gelis, atliekamas kombinuotas/aparatinis manikiūras,
+                    nagui suteikiama forma.</td>
+                            <td>23€</td>
+                            <td>1:00 val.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Nagų priauginimas</td>
+                            <td>Į Paslaugą įeina kombinuotas/aparatinis manikiūras, nagų priauginimas su lakavimu viena ar keliomis spalvomis.</td>
+                            <td>40€</td>
+                            <td>2:30 val.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <h4 style="text-align: center;">
+                        <strong>Pedikiūras</strong></h4>
+                        <table class="table table-borderless mt-2">
+                          <thead>
+                            <tr>
+                              <th scope="col-1">Nr.</th>
+                              <th scope="col-3">Procedūra</th>
+                              <th scope="col-4">Aprašymas</th>
+                              <th scope="col-2">Kaina</th>
+                              <th scope="col-2">Trukmė</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Express pedikiūrass</td>
+                            <td>Sutvarkomos odelės aplink nagus, lakuojama viena arba keliomis spalvomis.
+                 Pėdos NETVARKOMOS.</td>
+                            <td>25€</td>
+                            <td>1:00 val.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <h4 style="text-align: center;">
+                        <strong>Papildomos paslaugos</strong></h4>
+                        <table class="table table-borderless mt-2">
+                          <thead>
+                            <tr>
+                              <th scope="col-1">Nr.</th>
+                              <th scope="col-3">Procedūra</th>
+                              <th scope="col-4">Aprašymas</th>
+                              <th scope="col-2">Kaina</th>
+                              <th scope="col-2">Trukmė</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Prancūziškas manikiūras</td>
+                            <td> - </td>
+                            <td>3€</td>
+                            <td>+20 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Mini dailė</td>
+                            <td>Į paslaugą įeina dviejų nagų lengva dailė. Blizgučiai,
+                   folija, minimali inkrustacija, linijų piešimas.</td>
+                            <td>0€</td>
+                            <td>+10 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Midi dailė</td>
+                            <td>Vidutinio sunkumo dailė, daugiausiai ant 4 nagų,
+                   kelių spalvų piešiniai, geometrija abstrakcijos nereikalaujančios detalumo.</td>
+                            <td>3€</td>
+                            <td>+20 min</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Maxi dailė</td>
+                            <td>Sudėtinga dailė reikalaujinti detalumo. Smulkūs elementai piešti ranka.
+                   Inkrustacija daugiau nei ant dviejų nagų.</td>
+                            <td>5€</td>
+                            <td>+30 min</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+  </body>
+</html>

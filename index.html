@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Karolina nail artist</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/lt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/lt.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/paging.js"></script>
+    <script src="assets/js/calendar.js"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="icon" href="assets/logo.png" type="image/gif" sizes="32x32">
+  </head>
+  <body>
+
+      <div class="container-fluid">
+        <nav class="navbar navbar-default border border-dark mt-3 mb-4">
+          <a class="navbar-brand" href="javascript:window.location.reload();">
+            <img src="assets/logo1.png" class="logo" alt="Karolina nail artist">
+          </a>
+          <div class="float-left d-flex justify-content-center">
+            <button class="btn float-left m-3" id="mygt" type="button" name="button" onclick="openPage('/pavyzdziai');">Keletas pavyzdžių...</button>
+            <button class="btn float-left m-3" id="mygtu" type="button" name="button" onclick="">Prisijungti</button>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container" id="whole">
+        <div class="jumbotron page-mimi" id="container-pagnation1">
+          <div class="container">
+             <h1 class="">Pasirinkite procedūrą:</h1>
+             <br>
+             <h5 style="color: red;">Šios kainos galioja nuo Spalio mėn.</h5>
+             <br />
+             <button type="button" class="collapsible"><strong>Manikiūras</strong></button>
+              <div class="content" style="margin-bottom: 10px;">
+                <form>
+                  <hr />
+                  <input type="checkbox" id="procedura1" name="check" value="25" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura1"><strong>Manikiūras + gelinis lakavimas</strong></label>
+                  <label id="kaina"><strong>25€</strong></label>
+                  <hr>
+                  <label>Atliekamas kombinuotas/aparatinis manikiūras
+                  ir lakuojama viena arba keliomis spalvomis. Į paslaugą įeina seno gelio lako nuėmimas.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura1"><strong>1:30</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura2" name="check" value="20" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura2"><strong>Express gelinis lakavimas</strong></label>
+                  <label id="kaina"><strong>20€</strong></label>
+                  <hr>
+                  <label>Atliekamas gelinis lakavimas be manikiūro, odelės tik atstumdomos.
+                    Į paslaugą įeina seno gelio lako nuėmimas.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura2"><strong>1:10</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura3" name="check" value="30" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura3"><strong>Priaugintų nagų korekcija + manikiūras</strong></label>
+                  <label id="kaina"><strong>30€</strong></label>
+                  <hr>
+                  <label>Atliekama korekcija ir kombinuotas/aparatinis manikiūras.
+                    Į paslaugą įeina senos medžiagos nuėmimas.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura3"><strong>2:00</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura4" name="check" value="5" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura4"><strong>Tik gelio lako nuėmimas</strong></label>
+                  <label id="kaina"><strong>5€</strong></label>
+                  <hr>
+                  <label>Procedūros metu nuimamas senas gelinis lakavimas
+                    frezos pagalba, sutvarkoma nagų forma, pasirinktinai nulakuojama stiprikliu.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura4"><strong>0:30</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura5" name="check" value="10" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura5"><strong>Tik priaugintų nagų nuėmimas</strong></label>
+                  <label id="kaina"><strong>10€</strong></label>
+                  <hr>
+                  <label>Procedūros metu nuimamas kietasis gelis,
+                    nagams suteikiama forma, pasirinktinai nulakuojama stiprikliu.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura5"><strong>1:00</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura6" name="check" value="13" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura6"><strong>Manikiūras</strong></label>
+                  <label id="kaina"><strong>13€</strong></label>
+                  <hr>
+                  <label>Atliekamas kombinuotas/aparatinis manikiūras, nagui suteikiama forma.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura6"><strong>0:50</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura7" name="check" value="18" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura7"><strong>Seno gelio lako nuėmimas + manikiūras</strong></label>
+                  <label id="kaina"><strong>18€</strong></label>
+                  <hr>
+                  <label>Pašalinams senas gelio lakas, atliekamas kombinuotas/aparatinis manikiūras, nagui suteikiama forma.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura7"><strong>1:00</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura8" name="check" value="23" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura8"><strong>Priaugintų nagų nuėmimas + manikūras</strong></label>
+                  <label id="kaina"><strong>23€</strong></label>
+                  <hr>
+                  <label>Nuimamas kietas gelis, atliekamas kombinuotas/aparatinis manikiūras,
+                    nagui suteikiama forma.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura8"><strong>1:00</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+
+                  <hr />
+                  <input type="checkbox" id="procedura14" name="check" value="40" onclick="onlyOne(this)">
+                  &nbsp;
+                  <label for="procedura14"><strong>Nagų priauginimas</strong></label>
+                  <label id="kaina"><strong>40€</strong></label>
+                  <hr>
+                  <label>Į Paslaugą įeina kombinuotas/aparatinis manikiūras, nagų priauginimas su lakavimu viena ar keliomis spalvomis.</label>
+                  <br>
+                  <label>Trukmė ~ </label>
+                  <label id="procedura14"><strong>2:30</strong></label>
+                  <label><strong>val.</strong></label>
+                  <br>
+                  <hr />
+                </form>
+
+
+          </div>
+          <button type="button" id="pedikiuras" class="collapsible"><strong>Pedikiūras</strong></button>
+           <div class="content">
+             <form>
+               <hr />
+               <input type="checkbox" id="procedura9" name="procedura9" value="25">
+               &nbsp;
+               <label for="procedura9"><strong>Express pedikiūras</strong></label>
+               <label id="kaina"><strong>25€</strong></label>
+               <hr>
+               <label>Sutvarkomos odelės aplink nagus, lakuojama viena arba keliomis spalvomis.
+                 Pėdos NETVARKOMOS.</label>
+               <br>
+               <label>Trukmė ~ </label>
+               <label id="procedura9"><strong>1:00</strong></label>
+               <label><strong>val.</strong></label>
+               <br>
+               <hr />
+             </form>
+          </div>
+         </div>
+     </div>
+
+       <div class="jumbotron page-mimi" id="container-pagnation2">
+         <div class="container">
+            <h1 class="">Pasirinkite papildomą paslaugą:</h1>
+            <br />
+            <h5 style="color: red;">Šios kainos galioja nuo Spalio mėn.</h5>
+            <br>
+            <button type="button" class="collapsible"><strong>Papildomos paslaugos</strong></button>
+             <div class="content">
+               <form>
+                 <hr />
+                 <input type="checkbox" id="procedura10" name="check1" value="3" onclick="onlyOne1(this)">
+                 &nbsp;
+                 <label for="procedura10"><strong>Prancūziškas manikiūras</strong></label>
+                 <label id="kaina"><strong>3€</strong></label>
+                 <br>
+                 <label><strong>+20 min</strong></label>
+                 <label id="procedura10" hidden><strong>0:20</strong></label>
+                 <hr />
+
+                 <input type="checkbox" id="procedura11" name="check1" value="0" onclick="onlyOne1(this)">
+                 &nbsp;
+                 <label for="procedura11"><strong>Mini dailė</strong></label>
+                 <label id="kaina"><strong>nemokamai</strong></label>
+                 <hr>
+                 <label>Į paslaugą įeina dviejų nagų lengva dailė. Blizgučiai,
+                   folija, minimali inkrustacija, linijų piešimas.</label>
+                 <br>
+                 <label><strong>+10 min</strong></label>
+                 <label id="procedura11" hidden><strong>0:10</strong></label>
+                 <br>
+                 <hr />
+
+                 <input type="checkbox" id="procedura12" name="check1" value="3" onclick="onlyOne1(this)">
+                 &nbsp;
+                 <label for="procedura12"><strong>Midi dailė</strong></label>
+                 <label id="kaina"><strong>3€</strong></label>
+                 <hr>
+                 <label>Vidutinio sunkumo dailė, daugiausiai ant 4 nagų,
+                   kelių spalvų piešiniai, geometrija abstrakcijos nereikalaujančios detalumo.</label>
+                 <br>
+                 <label><strong>+20 min</strong></label>
+                 <label id="procedura12" hidden><strong>0:20</strong></label>
+                 <br>
+                 <hr />
+
+                 <input type="checkbox" id="procedura13" name="check1" value="5" onclick="onlyOne1(this)">
+                 &nbsp;
+                 <label for="procedura13"><strong>Maxi dailė</strong></label>
+                 <label id="kaina"><strong>5€</strong></label>
+                 <hr>
+                 <label>Sudėtinga dailė reikalaujinti detalumo. Smulkūs elementai piešti ranka.
+                   Inkrustacija daugiau nei ant dviejų nagų.</label>
+                 <br>
+                 <label><strong>+30 min</strong></label>
+                 <label id="procedura13" hidden><strong>0:30</strong></label>
+                 <br>
+                 <hr />
+               </form>
+             </div>
+         </div>
+       </div>
+
+       <div class="jumbotron page-mimi" id="container-pagnation3">
+         <h1 class="">Pasirinkite laiką:</h1>
+         <br>
+        <div id='calendar'></div>
+       </div>
+
+
+       <div class="jumbotron page-mimi" id="container-pagnation4">
+         <div class="container" style="margin-bottom: 0px;">
+           <h1>Registracijos forma</h1>
+           <br />
+           <div class="registracija">
+             <h3>Užpildykite duomenis apačioje:</h3>
+             <form action="/" method="post">
+             <div class="container">
+               <div class="row justify-content-center">
+                 <input class="col-5 mx-3 my-3" id="vardas" name="vardas" type="text" placeholder="Vardas" required/>
+                 <input class="col-5 mx-3 my-3" id="pavarde" name="pavarde" type="text" placeholder="Pavardė" required/>
+               </div>
+               <div class="row justify-content-center">
+                 <div class="col-5 mx-3" id="nopadding">
+                   <div id="invalid-feedback"></div>
+                 </div>
+                 <div class="col-5 mx-3" id="nopadding">
+                   <div id="invalid-feedback1"></div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="container">
+               <div class="row justify-content-center">
+                 <input class="col-5 mx-3 mb-3" id="email" name="email" type="email" placeholder="email@email.com" required/>
+                 <input class="col-5 mx-3 mb-3" id="numeris" name="telnumeris" type="tel" placeholder="+37061234567" required/>
+               </div>
+               <div class="row justify-content-center">
+                 <div class="col-5 mx-3" id="nopadding">
+                   <div id="invalid-feedback2"></div>
+                 </div>
+                 <div class="col-5 mx-3" id="nopadding">
+                   <div id="invalid-feedback3"></div>
+                 </div>
+               </div>
+             </div>
+             <div class="container mt-4 mb-0">
+               <div class="row justify-content-center">
+                   <button type="submit" id="registracija" onclick="return validate();">Registruotis</button>
+                   <input type="text" name="visasuma" id="visasumaa" style="display: none;"/>
+                   <input type="text" name="laikasnuo" id="laikasnuo" style="display: none;"/>
+                   <input type="text" name="laikasiki" id="laikasiki" style="display: none;"/>
+                   <input type="text" name="proceduros" id="proceduros" style="display: none;"/>
+               </div>
+             </div>
+             </form>
+           </div>
+         </div>
+       </div>
+
+       <div class="jumbotron page-mimi" id="container-pagnation5">
+
+       </div>
+
+       <div class="sumaa">
+         <label id="suma"><strong>Tarpinė suma:&nbsp;
+         <label id="visasuma">0€</label></label>
+       </div>
+
+       <ul id="luckmoshy" class="pagination justify-content-center pagination-lg">
+       <!--luckmoshypagnation page are paging here-->
+       </ul>
+
+      </div>
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content col-8 col-sm-8 col-md-6">
+          <form class="" action="/prisijungti" method="post">
+            <span class="close">&times;</span>
+            <br />
+            <h3><strong>Įveskite prisijungimo duomenis</strong></h3>
+            <br />
+            <br />
+            <div class="prisijung mb-3">
+              <label class="col-3">Prisijungimo vardas: </label>
+              <input class="col-8" type="text" id="pris" placeholder="Username"/>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-3">
+                <div id="invalid-feedback4"></div>
+              </div>
+              <div class="col-5">
+                <div id="invalid-feedback5"></div>
+              </div>
+            </div>
+            <br />
+            <div class="prisijung">
+              <label class="col-3">Slaptažodis: </label>
+              <input class="col-8" type="password" id="slapt" placeholder="Password"/>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-3">
+                <div id="invalid-feedback6"></div>
+              </div>
+              <div class="col-5">
+                <div id="invalid-feedback7"></div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="col text-center">
+              <button style="padding: 10px; left: 45%;" type="submit" id="mygt" onclick="return validate1();">Prisijungti</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+  </body>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("mygtu");
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <script>
+    $('#luckmoshy').luckmoshyPagination({
+  totalPages: 4,
+  startPage: 1,
+  visiblePages: 1,
+  initiateStartPageClick: true,
+  href: false,
+  hrefVariable: '{{number}}',
+  prev: 'Atgal',
+  next: 'Toliau',
+  loop: false,
+
+  // callback function
+  onPageClick: function (event, page) {
+     $('.page-active').removeClass('page-active');
+    $('#container-pagnation'+page).addClass('page-active');
+  },
+
+  // pagination Classes
+  paginationClass: 'pagination',
+  nextClass: 'next',
+  prevClass: 'prev',
+  pageClass: 'page-item ',
+  activeClass: 'active',
+  disabledClass: 'disabled'
+
+  });
+  </script>
+</html>
