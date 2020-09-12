@@ -23,13 +23,18 @@ router.post('/admin', urlencodedParser, function(req, res, next) {
       start: req.body.laikasnuo,
       end: req.body.laikasiki
     };
+    
+    const customer1 = {
+      start: req.body.laikasnuo,
+      end: req.body.laikasiki
+    };
 
     fs.readFile(path.resolve(process.cwd() + '/json/events.json'), 'utf8', function readFileCallback(err, data){
         if (err){
             console.log(err);
         } else {
         var obj = JSON.parse(data); //now it an object
-        obj.push(customer); //add some data
+        obj.push(customer1); //add some data
         json = JSON.stringify(obj); //convert it back to json
         fs.writeFile(path.resolve(process.cwd() + '/json/events.json'), json, err => {
           if (err) {
